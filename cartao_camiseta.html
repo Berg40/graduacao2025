@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartao Equipe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="img/logo.png" style="width: 100px; height: 100px;">
+        <h1>Cartão/Camiseta</h1>
+        <img src="img/caveira.png" style="width: 100px; height: 100px;">
+    </header>
+    <section>
+        <div class="dados">
+            <p><input type="text" id="nome" placeholder="Nome Completo" required></p>
+            <p><input type="number" id="idade" placeholder="Idade" required></p>
+            <p><input type="text" id="tempoTreino" placeholder="Tempo de Treino" required></p>
+            
+            <p><select class="option" name="unidade"  id="unidade">
+                <option value="" disabled selected>Onde Treina</option>
+                <option value="CompassFit Farol">CompassFit Farol</option>
+                <option value="CompassFit Centro">CompassFit Centro</option>
+                <option value="CompassFit Primavera">CompassFit Primavera</option>
+            </select>
+
+            </p>
+            <p><select class="option" name="graduacaoP" id="graduacao">
+                <option value="" disabled selected>Graduação</option>
+                <option value="Branco/Vermelho">Branco/Vermelho</option>
+                <option value="Vermelho">Vermelho</option>
+                <option value="Vermelho/Azul Claro">Vermelho/Azul Claro</option>
+                <option value="Azul Claro">Azul Claro</option>
+                <option value="Azul Claro/Azul Escuro">Azul Claro/Azul Escuro</option>
+            </select></p>
+            
+            
+            <p><select class="option"  name="sexo" id="sexo1">
+                <option value="" disabled selected>Sexo</option>
+                <option name="sexo" value="Feminino">Feminino</option>
+                <option name="sexo" value="Masculino">Masculino</option>
+            </select></p>
+            
+            
+            <p><select class="option" name="camiseta" id="camiseta">
+                <option value="" disable selected>Camiseta</option>
+                <option value="Não">Não</option>
+                <option value="PP">PP</option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+                <option value="EXG">EXG</option>
+            </select></p>
+
+            <p><select class="option" name="cartao" id="cartao">
+                <option value="" disabled selected>Cartão da Equipe</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+                
+            </select></p>
+
+            
+            <button onclick="confirmacao()">Confirmar </button>
+            <hr>
+            
+            
+            <div class= "resp" id="resp"></div>
+            
+            
+
+        </div>
+
+
+        
+    </section>
+    <footer>Copyrigth &copy;Berg Andrade 2025</footer>
+    <script src="scriptCamiseta.js"></script>
+</body>
+</html>

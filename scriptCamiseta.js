@@ -1,0 +1,69 @@
+
+function confirmacao() {
+    let nome = window.document.getElementById("nome").value;
+    let idade = window.document.getElementById("idade").value;
+    let tempoTreino = window.document.getElementById("tempoTreino").value;
+
+    let sexo = window.document.getElementById("sexo1").value;
+    let unidade = window.document.getElementById("unidade").value;
+    let graduacao = window.document.getElementById("graduacao").value;
+    let camiseta = window.document.getElementById("camiseta").value;
+    let cartao = window.document.getElementById("cartao").value
+
+    let valorCamiseta = 0
+    let valorCartao = 25
+    
+
+    const resp = window.document.getElementById("resp");
+
+    if (cartao == "Sim") {
+        valorCartao = 25
+    }
+    else {
+        valorCartao = 0
+    }
+
+
+    
+    if (camiseta == "Não") {
+        valorCamiseta = 0
+    }
+    else {
+        valorCamiseta = 55
+    }
+
+    if (nome.length == 0 || idade.length == 0 || tempoTreino.length == 0 || sexo.length == 0 || graduacao.length == 0 || camiseta.length == 0 || unidade.length == 0 ) {
+        alert("Preencha todos os Campos")
+        
+    }
+    
+    else {
+        
+        resp.style.display = "block";
+
+        resp.innerHTML = `<h1>Confira dos dados</h1>
+        <p>Nome: <b>${nome}</b><br><br>
+        Idade: <b>${idade} anos</b><br><br>
+        Tempo de Treino: <b>${tempoTreino}</b><br><br>
+        Unidade: <b>${unidade}</b><br><br>
+        Graduação Pretendida: <b>${graduacao}</b><br><br>
+        Sexo: <b>${sexo}</b><br><br>
+        Camiseta: <b>${camiseta}</b><br><br>
+        O valor da camiseta: <b>R$${valorCamiseta},00</b><br><br>
+        O valor do cartão: <b>R$${valorCartao},00</b> <br><br>
+        <hr>
+        O valor totao do pedido: <b>R$${valorCamiseta + valorCartao},00</b> </p><br>
+        <button class="enviar" onclick= "enviarWhats()">Enviar para Whatssapp</button>
+        `;
+        
+    }
+    
+}
+function enviarWhats() {
+        const texto = window.document.getElementById("resp").textContent;
+        const numero = "5512997071992";
+        const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+        window.open(link, "_blank");
+        
+        
+    }

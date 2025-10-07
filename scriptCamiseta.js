@@ -47,7 +47,7 @@ function confirmacao() {
         Email: <b>${email}</b><br><br>
         Tempo de Treino: <b>${tempoTreino}</b><br><br>
         Unidade: <b>${unidade}</b><br><br>
-        Graduação Pretendida: <b>${graduacao}</b><br><br>
+        Graduação:<b>${graduacao}</b><br><br>
         Sexo: <b>${sexo}</b><br><br>
         Camiseta: <b>${camiseta}</b><br><br>
         O valor da camiseta: <b>R$${valorCamiseta},00</b><br><br>

@@ -43,6 +43,7 @@ function confirmacao() {
 
         
         resp.style.display = "block";
+        
 
         resp.innerHTML = `<h1>Confira dos dados</h1>
         <p>Nome: <b>${nome}</b><br><br>

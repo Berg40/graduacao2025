@@ -10,6 +10,7 @@ function confirmacao() {
     let gPretendida = window.document.getElementById("graduacaoPretendida").value;
     let camiseta = window.document.getElementById("camiseta").value;
     let cartao = window.document.getElementById("cartao").value;
+   
 
     const resp = window.document.getElementById("resp");
 

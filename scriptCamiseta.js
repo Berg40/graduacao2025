@@ -8,7 +8,8 @@ function confirmacao() {
     let unidade = window.document.getElementById("unidade").value;
     let graduacao = window.document.getElementById("graduacao").value;
     let camiseta = window.document.getElementById("camiseta").value;
-    let cartao = window.document.getElementById("cartao").value
+    let cartao = window.document.getElementById("cartao").value;
+    let email = window.document.getElementById("email").value;
 
     let valorCamiseta = 0
     let valorCartao = 25

@@ -3,6 +3,7 @@ function confirmacao() {
     let nome = window.document.getElementById("nome").value;
     let idade = window.document.getElementById("idade").value;
     let tempoTreino = window.document.getElementById("tempoTreino").value;
+    let email = window.document.getElementById("email").value;
 
     let sexo = window.document.getElementById("sexo1").value;
     let unidade = window.document.getElementById("unidade").value;
@@ -13,7 +14,7 @@ function confirmacao() {
     const resp = window.document.getElementById("resp");
 
     if (cartao == "Sim") {
-         valorCartao = 20
+         valorCartao = 25
     }
     else {
         valorCartao = 0
@@ -48,6 +49,7 @@ function confirmacao() {
         resp.innerHTML = `<h1>Confira dos dados</h1>
         <p>Nome: <b>${nome}</b><br><br>
         Idade: <b>${idade} anos</b><br><br>
+        Email: <b>${email}</b><br><br>
         Tempo de Treino: <b>${tempoTreino}</b><br><br>
         Unidade: <b>${unidade}</b><br><br>
         Graduação Pretendida: <b>${gPretendida}</b><br><br>
@@ -56,8 +58,8 @@ function confirmacao() {
         O valor da graduação: <b>R$${valor},00</b><br><br>
         O valor do cartão: <b>R$${valorCartao},00</b> <br><br>
         <hr>
-        O valor totao do pedido: <b>R$${valor + valorCartao},00</b><br><br>
-        Pagamento até dia 20/11/2025
+        O valor total do pedido: <b>R$${valor + valorCartao},00</b><br><br>
+        Pagamento até dia 20/11/2025<br><br>
         Pix: wandemberg28@gmail.com </p><br>
         <button class="enviar" onclick= "enviarWhats()">Enviar para Whatssapp</button>
         `;

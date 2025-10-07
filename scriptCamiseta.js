@@ -44,6 +44,7 @@ function confirmacao() {
         resp.innerHTML = `<h1>Confira dos dados</h1>
         <p>Nome: <b>${nome}</b><br><br>
         Idade: <b>${idade} anos</b><br><br>
+        Email: <b>${email}</b><br><br>
         Tempo de Treino: <b>${tempoTreino}</b><br><br>
         Unidade: <b>${unidade}</b><br><br>
         Graduação Pretendida: <b>${graduacao}</b><br><br>
@@ -52,7 +53,7 @@ function confirmacao() {
         O valor da camiseta: <b>R$${valorCamiseta},00</b><br><br>
         O valor do cartão: <b>R$${valorCartao},00</b> <br><br>
         <hr>
-        O valor totao do pedido: <b>R$${valorCamiseta + valorCartao},00</b><br><br>
+        O valor total do pedido: <b>R$${valorCamiseta + valorCartao},00</b><br><br>
         
         Pagamento até dia 20/11/2025 <br><br>
         Pix: wandemberg28@gmail.com </p><br>

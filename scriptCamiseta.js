@@ -52,7 +52,10 @@ function confirmacao() {
         O valor da camiseta: <b>R$${valorCamiseta},00</b><br><br>
         O valor do cartão: <b>R$${valorCartao},00</b> <br><br>
         <hr>
-        O valor totao do pedido: <b>R$${valorCamiseta + valorCartao},00</b> </p><br>
+        O valor totao do pedido: <b>R$${valorCamiseta + valorCartao},00</b><br><br>
+        
+        Pagamento até dia 20/11/2025 <br><br>
+        Pix: wandemberg28@gmail.com </p><br>
         <button class="enviar" onclick= "enviarWhats()">Enviar para Whatssapp</button>
         `;
         

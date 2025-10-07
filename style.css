@@ -17,6 +17,7 @@ footer {
     font-size: 12px;
     margin-top: 40px;
     color: #bbb;
+    padding-bottom: 10px;
 }
 
 .dados {
@@ -93,3 +94,5 @@ button:hover {
 .resp h1 {
     text-align: center;
 }
+
+

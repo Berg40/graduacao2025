@@ -56,7 +56,9 @@ function confirmacao() {
         O valor da graduação: <b>R$${valor},00</b><br><br>
         O valor do cartão: <b>R$${valorCartao},00</b> <br><br>
         <hr>
-        O valor totao do pedido: <b>R$${valor + valorCartao},00</b> </p><br>
+        O valor totao do pedido: <b>R$${valor + valorCartao},00</b><br><br>
+        Pagamento até dia 20/11/2025
+        Pix: wandemberg28@gmail.com </p><br>
         <button class="enviar" onclick= "enviarWhats()">Enviar para Whatssapp</button>
         `;
         

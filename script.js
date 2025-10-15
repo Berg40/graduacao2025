@@ -1,54 +1,50 @@
-
 function confirmacao() {
-    let nome = window.document.getElementById("nome").value;
-    let idade = window.document.getElementById("idade").value;
-    let tempoTreino = window.document.getElementById("tempoTreino").value;
-    let email = window.document.getElementById("email").value;
+    const nome = document.getElementById("nome").value.trim();
+    const idade = document.getElementById("idade").value.trim();
+    const tempoTreino = document.getElementById("tempoTreino").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const sexo = document.getElementById("sexo1").value.trim();
+    const unidade = document.getElementById("unidade").value.trim();
+    const gPretendida = document.getElementById("graduacaoPretendida").value.trim();
+    const camiseta = document.getElementById("camiseta").value.trim();
+    const cartao = document.getElementById("cartao").value.trim();
 
-    let sexo = window.document.getElementById("sexo1").value;
-    let unidade = window.document.getElementById("unidade").value;
-    let gPretendida = window.document.getElementById("graduacaoPretendida").value;
-    let camiseta = window.document.getElementById("camiseta").value;
-    let cartao = window.document.getElementById("cartao").value;
-   
+    const resp = document.getElementById("resp");
 
-    const resp = window.document.getElementById("resp");
+    let valor = 0;
+    let valorCartao = (cartao === "Sim") ? 25 : 0;
 
-    if (cartao == "Sim") {
-         valorCartao = 25
+    // Verifica se há campos vazios
+    if (!nome || !idade || !tempoTreino || !sexo || !gPretendida || !camiseta || !unidade) {
+        alert("Preencha todos os campos!");
+        return;
     }
-    else {
-        valorCartao = 0
-    }
-    
 
-    
-
-    if (nome.length == 0 || idade.length == 0 || tempoTreino.length == 0 || sexo.length == 0 || gPretendida.length == 0 || camiseta.length == 0 || unidade.length == 0 ) {
-        alert("Preencha todos os Campos")
-    }
-    else {
-        if (gPretendida == "Branco/Vermelho") {
-                valor = 150;
-            
-        }
-        
-        else if (gPretendida == "Vermelho") {
+    // Define o valor da graduação
+    switch (gPretendida) {
+        case "Branco/Vermelho":
+            valor = 150;
+            break;
+        case "Vermelho":
             valor = 200;
-        }
-        else if (gPretendida == "Vermelho/Azul Claro") {
+            break;
+        case "Vermelho/Azul Claro":
             valor = 250;
-        }
-        else if (gPretendida == "Azul Claro") {
+            break;
+        case "Azul Claro":
             valor = 300;
-        }
+            break;
+        default:
+            valor = 0;
+    }
 
-        
-        resp.style.display = "block";
-        
+    const valorTotal = valor + valorCartao;
 
-        resp.innerHTML = `<h1>Confira dos dados</h1>
-        <p>Nome: <b>${nome}</b><br><br>
+    resp.style.display = "block";
+    resp.innerHTML = `
+        <h1>Confira os dados</h1>
+        <p>
+        Nome: <b>${nome}</b><br><br>
         Idade: <b>${idade} anos</b><br><br>
         Email: <b>${email}</b><br><br>
         Tempo de Treino: <b>${tempoTreino}</b><br><br>
@@ -57,22 +53,19 @@ function confirmacao() {
         Sexo: <b>${sexo}</b><br><br>
         Camiseta: <b>${camiseta}</b><br><br>
         O valor da graduação: <b>R$${valor},00</b><br><br>
-        O valor do cartão: <b>R$${valorCartao},00</b> <br><br>
+        O valor do cartão: <b>R$${valorCartao},00</b><br><br>
         <hr>
-        O valor total do pedido: <b>R$${valor + valorCartao},00</b><br><br>
+        O valor total do pedido: <b>R$${valorTotal},00</b><br><br>
         Pagamento até dia 20/11/2025<br><br>
-        Pix: wandemberg28@gmail.com </p><br>
-        <button class="enviar" onclick= "enviarWhats()">Enviar para Whatssapp</button>
-        `;
-        
-    }
-    
+        Pix: wandemberg28@gmail.com
+        </p><br>
+        <button class="enviar" onclick="enviarWhats()">Enviar para WhatsApp</button>
+    `;
 }
+
 function enviarWhats() {
-        const texto = window.document.getElementById("resp").textContent;
-        const numero = "5512997071992";
-        const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
-        window.open(link, "_blank");
-        
-        
-    }
+    const texto = document.getElementById("resp").innerText;
+    const numero = "5512997071992";
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(link, "_blank");
+}

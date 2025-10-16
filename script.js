@@ -19,24 +19,27 @@ function confirmacao() {
         alert("Preencha todos os campos!");
         return;
     }
-
-    // Define o valor da graduação
-    switch (gPretendida) {
-        case "Branco/Vermelho":
-            valor = 150;
-            break;
-        case "Vermelho":
-            valor = 200;
-            break;
-        case "Vermelho/Azul Claro":
-            valor = 250;
-            break;
-        case "Azul Claro":
-            valor = 300;
-            break;
-        default:
-            valor = 0;
+    else {
+        // Define o valor da graduação
+        if (gPretendida === "Branco/Vermelho") {
+            valor = 150
+        }
+        else if (gPretendida === "Vermelho") {
+            valor = 200
+        }
+        else if (gPretendida === "Vermelho/AzulClaro") {
+            valor = 250
+        }
+        else if (gPretendida === "AzulClaro") {
+            valor = 300
+        }
+        else if (gPretendida === "AzulClaro/AzulEscuro") {
+            valor = 350
+        }
     }
+   
+
+    
 
     const valorTotal = valor + valorCartao;
 
